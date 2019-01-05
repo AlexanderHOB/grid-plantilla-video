@@ -160,3 +160,40 @@ i{
 		top:0;
 	}
 }
+/* MediaQueries*/
+@media screen and (max-width: 1150px){
+
+	.video{
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 0.5em;
+	}
+	.video h2{
+	grid-column: span 2;
+	}
+
+
+}
+@media screen and (max-width: 750px){
+	
+	body{
+		font-size: 12px;
+	}
+
+}
+@media screen and (max-width: 620px){
+	body{
+		font-size: 16px;
+	}
+	.video{
+	grid-template-columns: 1fr;
+	grid-gap: 0.5em;
+	}
+	.video h2{
+	grid-column: span 1;
+	}
+	.container{
+	grid-template-columns: 20% 1fr;
+
+}
+
+}
