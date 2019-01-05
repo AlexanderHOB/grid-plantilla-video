@@ -1,0 +1,162 @@
+body{
+	margin:0;
+	height: 100vh;
+}
+.header{
+	grid-area:"header";
+	   box-shadow: 0 2px 20px 5px #f2f2f2;
+    z-index: 1;
+
+}
+.header nav{
+
+	display: grid;
+	grid-template-columns: 25% 1fr 20%;
+	grid-auto-rows: 75px;
+	/*justify-itegrid-area:"header";ms:center;*/
+	grid-gap: 10px;
+	grid-template-areas: "logo form usuario";
+	
+}
+.logo{
+	grid-area: "logo";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo img{
+	width: 50px;
+	height: 50px;
+}
+.buscador{
+	grid-area:form;
+	display: flex;
+	align-items: center;
+	
+}
+.buscador form{
+	width: 90%;
+}
+.buscador input{	
+	width: 100%;
+	border-radius: 0.25em;
+	box-shadow: none;
+	border:1px solid #b2b1b6;
+	padding: .5em;
+}
+.perfil{
+	grid-area:"usuario";
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+.perfil p{
+	color: #3c464f;
+	font-weight: 700;
+	margin-right: 1em;
+
+}
+.perfil  img{
+	width: 50px;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+.container{
+	display: grid;
+	grid-template-columns: 10% 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "aside section";
+	height:100%;
+}
+.menu{
+	grid-area:"aside";
+	background: #fd6766;
+	color:white;
+
+}
+
+nav{
+	height: 100%;
+}
+ul{
+	height: 90%;
+	margin:0;
+	padding: 10px 0 ;
+	display: grid;
+	grid-template-rows: repeat(3,100px) 1fr;
+	list-style: none;
+	justify-items:center;
+	text-align:center;
+}
+.menu ul li {
+	cursor:pointer;
+}
+.menu nav ul li:last-child{
+	align-self:end;
+}
+i{
+	font-size:3em;
+}
+.down{
+	color:#000;
+	font-size: 1.5em;
+}
+.peliculas{
+	grid-area: "section";
+	position: relative;
+}
+.video{
+	position: absolute;	
+	padding: 0 2em;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 1.5em;
+}
+
+.video a {
+	text-decoration: none;
+	position: relative;
+	color:#fff;
+}
+
+.video figure{
+	margin: 0px;
+}
+.video figure figcaption{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top:50%;
+	position: absolute;
+	background: rgba(253,103,102,.72941);
+	text-align: justify;
+	padding: 10px;
+}
+.video figure figcaption:hover{
+	/*bottom: 0;
+	left: 0;
+	right: 0;
+	top:0;*/
+	/*animation: subida 0.5s ease;*/
+	transition: top 0.3s ease;
+	top:0;
+}
+.titulo-pelicula{
+	padding: 0;
+	margin:0;
+	font-weight: 700;
+}
+.video h2{
+	grid-column: span 3;
+}
+
+.imagen{
+	width: 100%;
+	vertical-align: top;
+}
+/*KeyFrames*/
+@keyframes subida{
+	100%{
+		top:0;
+	}
+}
